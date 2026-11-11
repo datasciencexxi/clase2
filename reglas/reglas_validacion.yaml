@@ -1,0 +1,69 @@
+# Reglas de validación de gastos vs presupuesto.
+# Cada regla puede activarse/desactivarse y ajustar sus parámetros sin tocar código.
+# severidad: error (bloquea la aprobación del lote) | advertencia (requiere revisión)
+
+reglas:
+  - id: R01
+    nombre: Campos obligatorios y formato
+    descripcion: Los campos obligatorios deben venir informados; la fecha debe ser válida y el monto numérico mayor a cero.
+    severidad: error
+    activa: true
+    parametros:
+      campos_obligatorios: [id_gasto, fecha, proveedor, nro_factura, categoria, centro_costo, monto, moneda]
+      formato_fecha: "%Y-%m-%d"
+
+  - id: R02
+    nombre: Categoría y centro de costo válidos
+    descripcion: La categoría y el centro de costo deben existir en el catálogo.
+    severidad: error
+    activa: true
+    parametros: {}
+
+  - id: R03
+    nombre: Exceso de presupuesto
+    descripcion: El gasto acumulado por periodo + categoría + centro de costo no debe superar el presupuesto.
+    severidad: error
+    activa: true
+    parametros:
+      umbral_advertencia_pct: 90   # advertencia desde este % de ejecución
+      umbral_error_pct: 100        # error por sobre este % de ejecución
+
+  - id: R04
+    nombre: Gastos duplicados
+    descripcion: Detecta la misma factura de un proveedor más de una vez, o mismo proveedor + fecha + monto.
+    severidad: error
+    activa: true
+    parametros:
+      claves:
+        - [proveedor, nro_factura]
+        - [proveedor, fecha, monto]
+
+  - id: R05
+    nombre: Nivel de aprobación
+    descripcion: Todo gasto debe estar aprobado por una persona habilitada con el rol mínimo exigido por su tramo de monto.
+    severidad: error
+    activa: true
+    parametros: {}
+
+  - id: R06
+    nombre: Monto atípico
+    descripcion: Marca gastos cuyo monto supera N veces la mediana de su categoría.
+    severidad: advertencia
+    activa: true
+    parametros:
+      factor_mediana: 4
+      minimo_registros: 3   # no se evalúa si la categoría tiene menos registros
+
+  - id: R07
+    nombre: Fecha fuera de periodo
+    descripcion: La fecha del gasto debe caer en un periodo con presupuesto y no ser futura.
+    severidad: error
+    activa: true
+    parametros: {}
+
+  - id: R08
+    nombre: Moneda consistente
+    descripcion: La moneda del gasto debe coincidir con la moneda del presupuesto de su línea.
+    severidad: error
+    activa: true
+    parametros: {}

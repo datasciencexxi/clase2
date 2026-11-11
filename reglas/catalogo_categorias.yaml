@@ -1,0 +1,36 @@
+# Catálogo maestro usado por las reglas R02 (categorías/centros) y R05 (aprobaciones).
+moneda_base: CLP
+
+categorias:
+  VIAJES: Pasajes, alojamiento, traslados y viáticos
+  MATERIALES: Insumos, herramientas, repuestos y equipamiento operativo
+  SERVICIOS: Asesorías y servicios profesionales externos
+  TECNOLOGIA: Hardware, software y licencias
+  MARKETING: Publicidad, campañas y material promocional
+
+centros_costo:
+  ADM: Administración y Finanzas
+  OPS: Operaciones
+  VEN: Ventas
+
+# Nivel jerárquico de cada rol (mayor número = mayor autoridad).
+roles:
+  jefe: 1
+  gerente: 2
+  director: 3
+
+# Personas habilitadas para aprobar gastos y su rol.
+aprobadores:
+  Ana Perez: jefe
+  Carlos Rojas: gerente
+  Maria Soto: director
+
+# Tramos de aprobación: el gasto requiere al menos el rol indicado
+# cuando su monto es menor o igual a "hasta". El último tramo no tiene tope.
+tramos_aprobacion:
+  - hasta: 500000
+    rol_minimo: jefe
+  - hasta: 2000000
+    rol_minimo: gerente
+  - hasta: null
+    rol_minimo: director

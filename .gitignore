@@ -1,0 +1,3 @@
+reportes/*
+!reportes/.gitkeep
+__pycache__/
