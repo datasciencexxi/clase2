@@ -1,0 +1,21 @@
+id_gasto,fecha,proveedor,rut_proveedor,nro_factura,categoria,centro_costo,descripcion,monto,moneda,aprobado_por
+G001,2026-10-02,Aerolinea Sur,76111111-1,F-1001,VIAJES,VEN,Pasajes visita cliente,450000,CLP,Ana Perez
+G002,2026-10-05,Hotel Centro,76222222-2,F-2001,VIAJES,VEN,Alojamiento 2 noches,380000,CLP,Ana Perez
+G003,2026-10-03,Ferreteria Norte,76333333-3,F-3001,MATERIALES,OPS,Herramientas,800000,CLP,Carlos Rojas
+G004,2026-10-08,Ferreteria Norte,76333333-3,F-3002,MATERIALES,OPS,Insumos de bodega,650000,CLP,Carlos Rojas
+G005,2026-10-15,Ferreteria Norte,76333333-3,F-3003,MATERIALES,OPS,Repuestos,720000,CLP,Carlos Rojas
+G006,2026-10-06,Consultora Andes,76444444-4,F-4001,SERVICIOS,ADM,Asesoria contable,900000,CLP,Carlos Rojas
+G007,2026-10-20,Consultora Andes,76444444-4,F-4002,SERVICIOS,ADM,Asesoria tributaria,700000,CLP,Carlos Rojas
+G008,2026-10-09,TecnoStore,76555555-5,F-5001,TECNOLOGIA,OPS,Notebooks,1100000,CLP,Carlos Rojas
+G009,2026-10-22,TecnoStore,76555555-5,F-5002,TECNOLOGIA,OPS,Monitores,1200000,CLP,Carlos Rojas
+G010,2026-10-10,Agencia Creativa,76666666-6,F-6001,MARKETING,VEN,Campana redes sociales,400000,CLP,Ana Perez
+G011,2026-10-10,Agencia Creativa,76666666-6,F-6001,MARKETING,VEN,Campana redes sociales,400000,CLP,Ana Perez
+G012,2026-10-11,Taxi Express,76777777-7,F-7001,VIAJES,ADM,Traslado aeropuerto,25000,CLP,Ana Perez
+G013,2026-10-12,,,F-7002,VIAJES,ADM,Traslado reunion,30000,CLP,Ana Perez
+G014,2026-10-13,Restaurante Mar,76888888-8,F-8001,COMIDA,ADM,Almuerzo equipo,85000,CLP,Ana Perez
+G015,2026-10-14,Maquinarias Sur,76999999-9,F-9001,MATERIALES,OPS,Compresor industrial,2500000,CLP,Ana Perez
+G016,2026-10-16,Aerolinea Sur,76111111-1,F-1002,VIAJES,ADM,Pasajes internacionales,1600000,CLP,Carlos Rojas
+G017,2026-09-28,Hotel Centro,76222222-2,F-2002,VIAJES,VEN,Alojamiento septiembre,200000,CLP,Ana Perez
+G018,2026-10-18,Software Cloud,77111111-1,F-1101,TECNOLOGIA,OPS,Licencias anuales,150,USD,Ana Perez
+G019,2026-10-19,Ferreteria Norte,76333333-3,NC-3001,MATERIALES,OPS,Ajuste factura,-50000,CLP,Carlos Rojas
+G020,2026-10-21,Agencia Creativa,76666666-6,F-6002,MARKETING,VEN,Material impreso,150000,CLP,

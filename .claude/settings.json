@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(python3 .claude/skills/validacion-costos/scripts/validar.py:*)",
+      "Write(reportes/**)"
+    ],
+    "deny": [
+      "Edit(datos/**)",
+      "Write(datos/**)"
+    ]
+  }
+}
